@@ -1,65 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Bootstrap </title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-      .whatsapp{
-        position: fixed;
-        z-index: 1000;
-        width: 60px;
-        height: 60px;
-        right: 20px;
-        bottom: 500px;
-        background-color: green;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 50px;
-      }
-      .whatsapp:hover{
-        background-color: #c603d8;
-        text-decoration: none;
-        color: white;
-        transform: scale(1.1);
-        transition: 0.5s;
-      }
-      .video{
-        top: 0;
-        z-index: 5;
-        left: 0;
-      }
-      .arara{
-        position: fixed;
-        z-index: 1000;
-        width: 60px;
-        height: 60px;
-        right: 20px;
-        bottom: 20px;
-        background-color: green;
-        color: white;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
-        font-size: 60px;
-      }
-      .arara:hover{
-        background-color: #c603d8;
-        text-decoration: none;
-        color: white;
-        transform: scale(1.1);
-        transition: 0.5s;
-      }
-      
-    </style>
+     <link rel="stylesheet" href="estilo.css>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -220,17 +168,11 @@
 
         <div class="card" style="width: 18rem;">
           <img class="card-img-top" style="height: 350px;"
+            style="height: 350px;"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMdl7BvLnGr8f05xBhEw2sz73UQGcUdrKcyBd3TjgOnLFHWCioIpuPJ9DsK7WS5DWdgBg&usqp=CAU" alt="Imagem de capa do card">
           <div class="card-body">
           <h5 class="card-title">  Passeios e atividades </h5>
-          <input tyle="checkbox" id="verMais" class="d-none">
-          <div class="texto" id="textoResumo">
-          <p class="card-text">  Passeio de barco, pesca esportiva e trilhas. Clique em "Ver mais" para detalhes.
-            </p>
-          </div>
-          <div class="texto" id="textoCompleto" style="display: none;">
-            <p class="card-text">
-                                Passeio de barco pelo encontro dos rios
+          <p class="card-text">  Passeio de barco pelo encontro dos rios
 
                                 Saídas de grupos pequenos, duração ~2h: R$100–150 por pessoa (estimado com base em pacotes turísticos típicos).
 
@@ -255,9 +197,18 @@
                                 Participação em eventos (Festa do Milho, Peixe, etc.)
 
                                 Ingressos/eventos gratuitos ou custo moderado (R$10–30 por pessoa), com comidas típicas vendidas à parte.
-            </p>
-          </div>
-              <button class="btn btn-primary btn-sm" onclick="toggleTexto()">Ver mais</button>                   
+                                </p>
+
+                                <div class="meu-cartao">
+    <h3>Título do Meu Cartão</h3>
+    <p class="texto-curto">
+        Este é um texto bem longo que eu quero que seja minimizado. 
+        Ele pode ter várias linhas e eu não quero que ele ocupe todo o espaço do meu cartão, 
+        então vou cortá-lo e adicionar reticências no final para indicar que há mais conteúdo.
+        É importante que o usuário saiba que existe mais para ler, mas que a visualização inicial seja limpa.
+    </p>
+    <a href="#">Leia mais</a>
+</div>
           </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -279,58 +230,9 @@
 </div>
 
 
-<div class="d-flex justify-content-center m-5">
-  <a href="https://wa.me/+5544999237694" class="btn btn-success btn-lg "> Fale Conosco <i class="fa-brands fa-whatsapp"></i></a>
-</div>
-</div>
-
- <div class="arara azul">
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUydTVpNXZzZTRuenZmZGNrejAwNHZyZG9kMjZ1cmc1azZlczB0eGlrdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/9PwxaMmfh1wfS/source.gif" alt="GIF da Arara Azul" class="gif-arara">
- </div>
-
-       
-         
- 
-        
-  </div>
- 
-</div>
-
-
-
-    <a href="https://wa.me/+5544999237694" class=" whatsapp ">
-    <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-    <script>
-  function toggleTexto() {
-    const resumo = document.getElementById("textoResumo");
-    const completo = document.getElementById("textoCompleto");
-    const botao = event.target;
-
-    if (completo.style.display === "none") {
-      completo.style.display = "block";
-      resumo.style.display = "none";
-      botao.textContent = "Ver menos";
-    } else {
-      completo.style.display = "none";
-      resumo.style.display = "block";
-      botao.textContent = "Ver mais";
-    }
-  }
-</script>
-
-
-   
- 
-
-
 <footer class="bg-primary text-light py-5">
   <div class="container">
     <div class="row">
@@ -372,6 +274,6 @@
     </div>
   </div>
 </footer>
-
+    
 </body>
 </html>
