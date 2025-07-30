@@ -380,34 +380,36 @@ p {
 -->
 <div class="container">
   <div class="card-column column-0">
-    <a href="https://maps.app.goo.gl/psF69aNZctmDsLCf9"></a>
+    <a href="https://maps.app.goo.gl/psF69aNZctmDsLCf9">
     <div class="card card-color-0">
       <div class="border"></div>
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
       <h1>  Estadia </h1>
     </div>
-    <a href="https://maps.app.goo.gl/LjaDFmNHdKXf6vWVA"></a>
+</a>
+    <a href="https://maps.app.goo.gl/LjaDFmNHdKXf6vWVA">
     <div class="card card-color-2">
       <div class="border"></div>
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
       <h1> Restaurante </h1>
     </div>
-    <a href="https://www.google.com"></a>
   </div>
+</a>
   <div class="card-column column-1">
-    <a href="https://maps.app.goo.gl/ovrZ5JnRj37AGKp86"></a>
+    <a href="https://maps.app.goo.gl/ovrZ5JnRj37AGKp86">
     <div class="card card-color-1">
       <div class="border"></div>
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
       <h1> Passeios e Atividades </h1>
     </div>
+    </a>
     <a href="https://www.google.com"></a>
     <div class="card card-color-3">
       <div class="border"></div>
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
       <h1>Política de Cancelamento </h1>
     </div>
-    <a href="https://www.google.com"></a>
+  
   </div>
 </div>
 
@@ -503,19 +505,7 @@ function attachListenerToCard(i) {
   })
 }
 
-/* Quando um cartão é clicado */
-function onCardClick(card, i) {
-  // definir o cartão atual
-  currentCard = card;
-  // adicione a classe 'clicado' ao cartão para que ele seja animado
-  currentCard.className += ' clicked';
-  // animar a 'capa' do cartão após um atraso de 500 ms
-  setTimeout(function() {animateCoverUp(currentCard)}, 500);
-  // animar as outras cartas
-  animateOtherCards(currentCard, true);
-  // adicione a classe aberta ao conteúdo da página
-  openContent.className += ' open';
-}
+
 
 /*
 * Este efeito é criado pegando uma div de "capa" separada, colocando-a

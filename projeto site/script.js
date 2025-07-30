@@ -45,18 +45,7 @@ function attachListenerToCard(i) {
 }
 
 /* When a card is clicked */
-function onCardClick(card, i) {
-  // set the current card
-  currentCard = card;
-  // add the 'clicked' class to the card, so it animates out
-  currentCard.className += ' clicked';
-  // animate the card 'cover' after a 500ms delay
-  setTimeout(function() {animateCoverUp(currentCard)}, 500);
-  // animate out the other cards
-  animateOtherCards(currentCard, true);
-  // add the open class to the page content
-  openContent.className += ' open';
-}
+
 
 /*
 * This effect is created by taking a separate 'cover' div, placing
