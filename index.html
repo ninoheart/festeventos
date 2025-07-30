@@ -42,6 +42,227 @@
         right: 10px;
         z-index: auto;
       }
+      /* 
+** Layout, Text & Colors 
+*/
+
+body {
+  background: #efecf3;
+  font-size: 18px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card-column {
+  width: 50%;
+  float: left;
+  padding: 4%;
+  box-sizing: border-box;
+}
+
+.column-1 {
+  padding-top: 100px;
+}
+
+.card {
+  width: 92%;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: #EB5160;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 60px;
+}
+
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border: 1px solid #fff;
+  opacity: 0.5;
+  left: -6px;
+  top: -6px;
+}
+
+.card h1 {
+  position: relative;
+  padding: 190px 0px 100px 10px;
+  width: 90%;
+}
+
+.card > img {
+  width: 90%;
+  position: absolute;
+  top: -6%;
+  left: -6%;
+}
+
+.card-color-0 {
+  background-color: #EB5160;
+}
+
+.card-color-1 {
+  background-color: #8F3985;
+}
+
+.card-color-2 {
+  background-color: #8DAA91;
+}
+
+.card-color-3 {
+  background-color: #888DA7;
+}
+
+/* A capa (fundo expandido) */
+.cover {
+  position: fixed;
+  background: #EB5160;
+  z-index: 100;
+  transform-origin: 50% 50%;
+}
+
+/* O conteúdo da página aberta */
+.open-content {
+  width: 100%;
+  z-index: 110;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.open-content img {
+  position: relative;
+  width: 90%;
+  margin-left: 3%;
+  margin-top: 20px;
+  z-index: 5;
+}
+
+.open-content .text {
+  background: #fff;
+  margin-top: -56%;
+  padding: 60% 5% 5% 5%;
+  width: 80%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.open-content .text h1, .open-content .text p {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.close-content {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 30px;
+  height: 30px;
+}
+
+.close-content span {
+  background: #222;
+  width: 30px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 14px;
+}
+
+.x-1 {
+  transform: rotate(45deg);
+}
+
+.x-2 {
+  transform: rotate(-45deg);
+}
+
+/* 
+** Transições
+*/
+
+.card {
+  transition: opacity 200ms linear 320ms, transform 200ms ease-out 320ms;
+}
+
+.border {
+  transition: opacity 200ms linear, transform 200ms ease-out;
+}
+
+.card img {
+  transition: opacity 200ms linear 0ms, transform 200ms ease-in 0ms;
+}
+
+.card h1 {
+  transform: translate3d(20%, 0px, 0px);  
+  transition: opacity 200ms linear 120ms, transform 200ms ease-in 120ms;
+}
+
+/*Cartão clicado*/
+.card.clicked img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.clicked .border {
+  opacity: 0;
+  transform: scale(1.3);
+}
+
+.card.out, .card.out img {
+  transform: translate3d(0px, -40px, 0px);
+  opacity: 0;
+}
+
+.card.out h1, .card.clicked h1 {
+  transform: translate3d(20%, -40px, 0px);
+  opacity: 0;
+}
+
+.cover {
+  transition: transform 300ms ease-in-out;
+}
+
+.open-content {
+  transition: opacity 200ms linear 0ms;
+}
+
+.open-content.open {
+  opacity: 1;
+  pointer-events: all;
+  transition-delay: 1000ms;
+}
+
+/* 
+** Consultas de mídia
+*/
+
+@media screen and (max-width: 600px) {
+  .card-column {
+    width: 90%;
+  }
+  
+  .column-1 {
+    padding-top: 0px;
+  }
+  
+  .open-content img {
+    margin-top: 40px;
+  }
+}
       
     </style>
 </head>
@@ -80,7 +301,7 @@
         </div>
       </nav>
 
-
+    
 
     
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -144,102 +365,64 @@
         </div>
         <div class="col-6">
             <iframe width="850" height="560" src="https://www.youtube.com/embed/1PLJGIFoAPQ?si=jgLjV4fSMPrHJlVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29453.15029427042!2d-53.124098474906916!3d-22.6670661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948dbf0bce28dad9%3A0xc0533da3057fdaa!2sPorto%20Maringa!5e0!3m2!1spt-BR!2sbr!4v1750891779418!5m2!1spt-BR!2sbr" width="900" height="450" style="border:500;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
         </div>
     </div>
     
 </div>
         <h2 class="text-center m-5"> Informações </h2>
-    <div class="d-flex justify-content-center flex-wrap">
- 
-    <div class="card-deck">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
- style="height: 350px;"
-  src="https://casatemporada.com/inc/timthumb.php?w=379&h=262&q=30&a=c&src=%2Fuploads%2Fanuncios%2Ffotos%2Fe4dd5bd5de241c54a849aff6c47a1f1a.jpeg" alt="Imagem de capa do card">
-          <div class="card-body">
-          <h5 class="card-title"> Estadia</h5>
-          <p class="card-text">  Diária para 2 adultos (quarto casal/júnior): R$322  
-                                    Preço por pessoa pode ser reduzido em quartos compartilhados.
-                                    Estrutura: piscina externa, restaurante, ar condicionado, Wi‑Fi, estacionamento gratuito.
-            </p>
-          </div>
-        </div> 
-
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
-            style="height: 350px;"
-            src="fotos/8.png" alt="Imagem de capa do card">
-          <div class="card-body">
-           <h5 class="card-title"> Restaurante</h5>
-          <p class="card-text"> 
-                                CABO DA ROCA (@cabo.daroca) - Instagram
-
-                                Lanchonete El Dourado
-
-            </p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMdl7BvLnGr8f05xBhEw2sz73UQGcUdrKcyBd3TjgOnLFHWCioIpuPJ9DsK7WS5DWdgBg&usqp=CAU" alt="Imagem de capa do card">
-          <div class="card-body">
-          <h5 class="card-title">  Passeios e atividades </h5>
-          <input tyle="checkbox" id="verMais" class="d-none">
-          <div class="texto" id="textoResumo">
-          <p class="card-text">  Passeio de barco, pesca esportiva e trilhas. Clique em "Ver mais" para detalhes.
-            </p>
-          </div>
-          <div class="texto" id="textoCompleto" style="display: none;">
-            <p class="card-text">
-                                Passeio de barco pelo encontro dos rios
-
-                                Saídas de grupos pequenos, duração ~2h: R$100–150 por pessoa (estimado com base em pacotes turísticos típicos).
-
-                                Pesca esportiva guiada
-
-                                Meio período: R$150–250 por pessoa
-
-                                Dia inteiro: R$300–400 por pessoa
- 
-                                Equipamento geralmente incluso (varas, iscas).
-
-                                Trilhas leves e ecoturismo
-
-                                Livre e sem custo (use mapas e zona de prainhas)
-
-                                Guias locais: R$80–150 por pessoa, dependendo da duração.
-
-                                Aluguel de camarote ou espaço de lazer
-
-                                Em áreas privadas da pousada ou beira-rio: R$200–400 por dia (grupo até 6 pessoas).
-
-                                Participação em eventos (Festa do Milho, Peixe, etc.)
-
-                                Ingressos/eventos gratuitos ou custo moderado (R$10–30 por pessoa), com comidas típicas vendidas à parte.
-            </p>
-          </div>
-              <button class="btn btn-primary btn-sm" onclick="toggleTexto()">Ver mais</button>                   
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
-            style="height: 350px;"
-            src="fotos/Política.png" alt="Imagem de capa do card">
-          <div class="card-body">
-           <h5 class="card-title"> Política de cancelamento</h5>
-          <p class="card-text"> 
-                                Para receber um reembolso integral, você deve cancelar até 25 dias antes do início da experiência.
-
-           </p>             
-          </div>
-        </div>
-        
-        
+    
+  <!--
+  Observação: este código não está pronto para ser usado como está em produção no seu site. Ele precisará ser adaptado para ser compatível com vários navegadores e acessível. Eu só queria compartilhar como se pode obter esse efeito com CSS e JS, sem outras dependências.
+-->
+<div class="container">
+  <div class="card-column column-0">
+    <a href="https://maps.app.goo.gl/psF69aNZctmDsLCf9">
+    <div class="card card-color-0">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
+      <h1>  Estadia </h1>
+    </div>
+</a>
+    <a href="https://maps.app.goo.gl/LjaDFmNHdKXf6vWVA">
+    <div class="card card-color-2">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
+      <h1> Restaurante </h1>
+    </div>
   </div>
- 
+</a>
+  <div class="card-column column-1">
+    <a href="https://maps.app.goo.gl/ovrZ5JnRj37AGKp86">
+    <div class="card card-color-1">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+      <h1> Passeios e Atividades </h1>
+    </div>
+    </a>
+    <a href="https://www.google.com"></a>
+    <div class="card card-color-3">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+      <h1>Política de Cancelamento </h1>
+    </div>
+  
+  </div>
 </div>
+
+<div id="cover" class="cover"></div>
+
+<div id="open-content" class="open-content">
+  <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
+  <img id="open-content-image" src="" />
+  <div class="text" id="open-content-text">
+  </div>
+</div>
+        
+        
+  
+ 
+
 
 
 
@@ -275,11 +458,182 @@
       botao.textContent = "Ver mais";
     }
   }
+  // listando variáveis aqui para que fiquem no escopo global
+var cards, nCards, cover, openContent, openContentText, pageIsOpen = false,
+    openContentImage, closeContent, windowWidth, windowHeight, currentCard;
+
+// iniciar o processo
+init();
+
+function init() {
+  resize();
+  selectElements();
+  attachListeners();
+}
+
+// selecione todos os elementos no DOM que serão usados
+function selectElements() {
+  cards = document.getElementsByClassName('card'),
+  nCards = cards.length,
+  cover = document.getElementById('cover'),
+  openContent = document.getElementById('open-content'),
+  openContentText = document.getElementById('open-content-text'),
+  openContentImage = document.getElementById('open-content-image')
+  closeContent = document.getElementById('close-content');
+}
+
+/* Anexando três ouvintes de eventos aqui:
+- um ouvinte de evento de clique para cada cartão
+- um ouvinte de evento de clique para o botão de fechar
+- um ouvinte de evento de redimensionamento na janela
+*/
+function attachListeners() {
+  for (var i = 0; i < nCards; i++) {
+    attachListenerToCard(i);
+  }
+  closeContent.addEventListener('click', onCloseClick);
+  window.addEventListener('resize', resize);
+}
+
+function attachListenerToCard(i) {
+  cards[i].addEventListener('click', function(e) {
+    var card = getCardElement(e.target);
+    onCardClick(card, i);
+  })
+}
+
+
+
+/*
+* Este efeito é criado pegando uma div de "capa" separada, colocando-a
+* na mesma posição do cartão clicado e animando-a para
+* se tornar o plano de fundo da "página" aberta.
+* Parece que o próprio cartão está sendo animado para o plano de fundo,
+* mas fazer dessa forma é mais eficiente (porque a div de capa está
+* absolutamente posicionada e não tem filhos), e há menos
+* necessidade de lidar com o z-index e outros elementos no cartão
+*/
+function animateCoverUp(card) {
+  // obter a posição do cartão clicado
+  var cardPosition = card.getBoundingClientRect();
+  // obtenha o estilo do cartão clicado
+  var cardStyle = getComputedStyle(card);
+  setCoverPosition(cardPosition);
+  setCoverColor(cardStyle);
+  scaleCoverToFillWindow(cardPosition);
+  // atualizar o conteúdo da página aberta
+  openContentText.innerHTML = '<h1>'+card.children[2].textContent+'</h1>'+paragraphText;
+  openContentImage.src = card.children[1].src;
+  setTimeout(function() {
+    // atualize a posição de rolagem para 0 (para que fique no topo da página 'aberta')
+    window.scroll(0, 0);
+    // definir página para abrir
+    pageIsOpen = true;
+  }, 300);
+}
+
+function animateCoverBack(card) {
+  var cardPosition = card.getBoundingClientRect();
+  // o cartão original pode estar em uma posição diferente, devido à rolagem, então a posição da capa precisa ser redefinida antes de reduzir novamente
+  setCoverPosition(cardPosition);
+  scaleCoverToFillWindow(cardPosition);
+  // animar escala de volta ao tamanho e posição do cartão
+  cover.style.transform = 'scaleX('+1+') scaleY('+1+') translate3d('+(0)+'px, '+(0)+'px, 0px)';
+  setTimeout(function() {
+    // definir o conteúdo de volta para vazio
+    openContentText.innerHTML = '';
+    openContentImage.src = '';
+    // estilize a capa como 0x0 para que fique escondida
+    cover.style.width = '0px';
+    cover.style.height = '0px';
+    pageIsOpen = false;
+    // remova a classe clicada para que o cartão seja animado novamente
+    currentCard.className = currentCard.className.replace(' clicked', '');
+  }, 301);
+}
+
+function setCoverPosition(cardPosition) {
+  // estilize a capa de modo que fique exatamente na mesma posição do cartão
+
+  cover.style.left = cardPosition.left + 'px';
+  cover.style.top = cardPosition.top + 'px';
+  cover.style.width = cardPosition.width + 'px';
+  cover.style.height = cardPosition.height + 'px';
+}
+
+function setCoverColor(cardStyle) {
+  // estilize a capa para que ela tenha a mesma cor do cartão
+  cover.style.backgroundColor = cardStyle.backgroundColor;
+}
+
+function scaleCoverToFillWindow(cardPosition) {
+  // calcular a escala e a posição para que o cartão preencha a página,
+  var scaleX = windowWidth / cardPosition.width;
+  var scaleY = windowHeight / cardPosition.height;
+  var offsetX = (windowWidth / 2 - cardPosition.width / 2 - cardPosition.left) / scaleX;
+  var offsetY = (windowHeight / 2 - cardPosition.height / 2 - cardPosition.top) / scaleY;
+  // defina a transformação na capa - ela será animada por causa da transição definida no CSS
+  cover.style.transform = 'scaleX('+scaleX+') scaleY('+scaleY+') translate3d('+(offsetX)+'px, '+(offsetY)+'px, 0px)';
+}
+
+/* Quando o fechamento é clicado */
+function onCloseClick() {
+  //remova a classe aberta para que o conteúdo da página seja animado
+  openContent.className = openContent.className.replace(' open', '');
+  // animar a capa de volta à posição original do cartão e tamanho
+  animateCoverBack(currentCard);
+  // animar em outros cartões
+  animateOtherCards(currentCard, false);
+}
+
+function animateOtherCards(card, out) {
+  var delay = 100;
+  for (var i = 0; i < nCards; i++) {
+    // animar cartas em um escalonamento, 1 a cada 100 ms
+    if (cards[i] === card) continue;
+    if (out) animateOutCard(cards[i], delay);
+    else animateInCard(cards[i], delay);
+    delay += 100;
+  }
+}
+
+// animações em cartas individuais (adicionando/removendo nomes de cartas)
+function animateOutCard(card, delay) {
+  setTimeout(function() {
+    card.className += ' out';
+   }, delay);
+}
+
+function animateInCard(card, delay) {
+  setTimeout(function() {
+    card.className = card.className.replace(' out', '');
+  }, delay);
+}
+
+// esta função pesquisa na árvore DOM até atingir o elemento do cartão que foi clicado
+function getCardElement(el) {
+  if (el.className.indexOf('card ') > -1) return el;
+  else return getCardElement(el.parentElement);
+}
+
+// função de redimensionamento - registra a largura e a altura da janela
+function resize() {
+  if (pageIsOpen) {
+    // update position of cover
+    var cardPosition = currentCard.getBoundingClientRect();
+    setCoverPosition(cardPosition);
+    scaleCoverToFillWindow(cardPosition);
+  }
+  windowWidth = window.innerWidth;
+  windowHeight = window.innerHeight;
+}
+
+var paragraphText = '<p>Somebody once told me the world is gonna roll me. I ain\'t the sharpest tool in the shed. She was looking kind of dumb with her finger and her thumb in the shape of an "L" on her forehead. Well the years start coming and they don\'t stop coming. Fed to the rules and I hit the ground running. Didn\'t make sense not to live for fun. Your brain gets smart but your head gets dumb. So much to do, so much to see. So what\'s wrong with taking the back streets? You\'ll never know if you don\'t go. You\'ll never shine if you don\'t glow.</p><p>Hey now, you\'re an all-star, get your game on, go play. Hey now, you\'re a rock star, get the show on, get paid. And all that glitters is gold. Only shooting stars break the mold.</p><p>It\'s a cool place and they say it gets colder. You\'re bundled up now, wait till you get older. But the meteor men beg to differ. Judging by the hole in the satellite picture. The ice we skate is getting pretty thin. The water\'s getting warm so you might as well swim. My world\'s on fire, how about yours? That\'s the way I like it and I never get bored.</p>';
 </script>
 
 
    
- 
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29453.15029427042!2d-53.124098474906916!3d-22.6670661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948dbf0bce28dad9%3A0xc0533da3057fdaa!2sPorto%20Maringa!5e0!3m2!1spt-BR!2sbr!4v1750891779418!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
 
 
 <footer class="bg-primary text-light py-5">

@@ -107,6 +107,7 @@
   </a>
 </div>
 
+
     <div class="container">
     <h1> Porto Maringá </h1>
     <p> </p>
@@ -140,87 +141,52 @@
     
 </div>
         <h2 class="text-center m-5"> Informações </h2>
-    <div class="d-flex justify-content-center flex-wrap">
- 
-    <div class="card-deck">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
- style="height: 350px;"
-  src="https://casatemporada.com/inc/timthumb.php?w=379&h=262&q=30&a=c&src=%2Fuploads%2Fanuncios%2Ffotos%2Fe4dd5bd5de241c54a849aff6c47a1f1a.jpeg" alt="Imagem de capa do card">
-          <div class="card-body">
-          <h5 class="card-title"> Estadia</h5>
-          <p class="card-text">  Diária para 2 adultos (quarto casal/júnior): R$322  
-                                    Preço por pessoa pode ser reduzido em quartos compartilhados.
-                                    Estrutura: piscina externa, restaurante, ar condicionado, Wi‑Fi, estacionamento gratuito.
-            </p>
-          </div>
-        </div> 
-
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
-            style="height: 350px;"
-            src="fotos/8.png" alt="Imagem de capa do card">
-          <div class="card-body">
-           <h5 class="card-title"> Alimentação </h5>
-          <p class="card-text"> 
-                                Almoço (restaurante local)	R$25–40
-                                Jantar (simples ou petisco)	R$20–50
-                                Lanches/bebidas	R$5–15
-            </p>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
-            style="height: 350px;"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMdl7BvLnGr8f05xBhEw2sz73UQGcUdrKcyBd3TjgOnLFHWCioIpuPJ9DsK7WS5DWdgBg&usqp=CAU" alt="Imagem de capa do card">
-          <div class="card-body">
-          <h5 class="card-title">  Passeios e atividades </h5>
-          <p class="card-text">  Passeio de barco pelo encontro dos rios
-
-                                Saídas de grupos pequenos, duração ~2h: R$100–150 por pessoa (estimado com base em pacotes turísticos típicos).
-
-                                Pesca esportiva guiada
-
-                                Meio período: R$150–250 por pessoa
-
-                                Dia inteiro: R$300–400 por pessoa
- 
-                                Equipamento geralmente incluso (varas, iscas).
-
-                                Trilhas leves e ecoturismo
-
-                                Livre e sem custo (use mapas e zona de prainhas)
-
-                                Guias locais: R$80–150 por pessoa, dependendo da duração.
-
-                                Aluguel de camarote ou espaço de lazer
-
-                                Em áreas privadas da pousada ou beira-rio: R$200–400 por dia (grupo até 6 pessoas).
-
-                                Participação em eventos (Festa do Milho, Peixe, etc.)
-
-                                Ingressos/eventos gratuitos ou custo moderado (R$10–30 por pessoa), com comidas típicas vendidas à parte.
-                                </p>
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" style="height: 350px;"
-            style="height: 350px;"
-            src="https://thelles.com.br/wp-content/uploads/2023/08/POLITICA-1.png" alt="Imagem de capa do card">
-          <div class="card-body">
-           <h5 class="card-title"> Política de cancelamento</h5>
-          <p class="card-text"> 
-                                Para receber um reembolso integral, você deve cancelar até 25 dias antes do início da experiência.
-
-           </p>             
-          </div>
-        </div>
+   
+         
         
-        
+        <!--
+  Please note: this code is in no way ready to be used as is in production on your website. It will need to be adapted to be cross browser compliant & accessible. I just wanted to share how one might go about this effect with CSS & JS and no other dependencies
+-->
+<div class="container">
+  <div class="card-column column-0">
+    <a href="https://maps.app.goo.gl/psF69aNZctmDsLCf9"></a>
+    <div class="card card-color-0">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg" />
+      <h1> Estadia </h1>
+    </div>
+    <a href="https://maps.app.goo.gl/LjaDFmNHdKXf6vWVA">
+    <div class="card card-color-2">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg" />
+      <h1> Restaurante </h1>
+    </div>
+  </div>
+   <a href="https://maps.app.goo.gl/ovrZ5JnRj37AGKp86"></a>
+  <div class="card-column column-1">
+    <div class="card card-color-1">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg" />
+      <h1> Passeios e Atividades </h1>
+    </div>
+    <div class="card card-color-3">
+      <div class="border"></div>
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
+      <h1> Política de Cancelamento </h1>
+    </div>
+  </div>
+</div>
+
+<div id="cover" class="cover"></div>
+
+<div id="open-content" class="open-content">
+  <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
+  <img id="open-content-image" src="" />
+  <div class="text" id="open-content-text">
+  </div>
+</div>
   </div>
  
-</div>
 
 
 <div class="d-flex justify-content-center m-5">
@@ -229,33 +195,8 @@
 
 
 
-     <div class="meu-cartao">
-    <h3>Título do Meu Cartão</h3>
-    <p class="texto-curto">
-        Este é um texto bem longo que eu quero que seja minimizado. 
-        Ele pode ter várias linhas e eu não quero que ele ocupe todo o espaço do meu cartão, 
-        então vou cortá-lo e adicionar reticências no final para indicar que há mais conteúdo.
-        É importante que o usuário saiba que existe mais para ler, mas que a visualização inicial seja limpa.
-    </p>
-    <a href="#">Leia mais</a>
-</div>
-         
- 
-        
-  </div>
- 
-</div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29453.15029427042!2d-53.124098474906916!3d-22.6670661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948dbf0bce28dad9%3A0xc0533da3057fdaa!2sPorto%20Maringa!5e0!3m2!1spt-BR!2sbr!4v1750891779418!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-      
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-
-    
-
-   
- 
 
 
 <footer class="bg-primary text-light py-5">
@@ -299,6 +240,20 @@
     </div>
   </div>
 </footer>
+
+      
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+    
+
+
+ 
+
+
+
 
 </body>
 </html>
