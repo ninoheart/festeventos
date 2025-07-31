@@ -409,9 +409,12 @@ p {
     <div class="card card-color-3">
       <div class="border"></div>
       <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg" />
-      <h1>Política de Cancelamento </h1>
-      <div id="textoPolitica" style="display: none; padding: 10px;">
-      <p> Para carcelar a reserva, é necessario entrar em contato com o estabelecimento com pelo menos 48 Horas de antecedência, sera cobrado 50% do valor total da reserva, caso não seja feito o cancelamenta com antecedência, o valor total da reseva será cobrado.</p>
+      <h1 style="font-size: 35px;">Política de Cancelamento </h1>
+      <button class="btn btn-primary btn-sm" onclick="toggleTexto()" style="z-index: 999;">Ver mais</button>
+      <div id="textoPolitica" style=" padding: 15px;">
+        <div id="textoCompleto">
+             <p> Para carcelar a reserva, é necessario entrar em contato com o estabelecimento com pelo menos 48 Horas de antecedência, sera cobrado 50% do valor total da reserva, caso não seja feito o cancelamenta com antecedência, o valor total da reseva será cobrado.</p>   
+        </div>
       </div>
     </div>
   
@@ -434,7 +437,7 @@ p {
 
 
 
-</div>
+
 
 
 
@@ -451,6 +454,7 @@ p {
 
 
     <script>
+
   function toggleTexto() {
     const resumo = document.getElementById("textoResumo");
     const completo = document.getElementById("textoCompleto");
@@ -649,7 +653,7 @@ function togglePolitica() {
 </script>
 
 
-   
+  </div> 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29453.15029427042!2d-53.124098474906916!3d-22.6670661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948dbf0bce28dad9%3A0xc0533da3057fdaa!2sPorto%20Maringa!5e0!3m2!1spt-BR!2sbr!4v1750891779418!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
 
 
