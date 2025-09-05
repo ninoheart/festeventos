@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(29, 182, 202);
+    font-family: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*ativar flex box */
+    display: flex;
+    /*alinhar direita esquerda */
+    justify-content: center;
+    /*alinhar em cima em baixo */
+    align-items: center;
+    /*define a altura de acordo com o tamanho da tela */
+    height: 100vh;;
+}
+
+.painel{
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    /*ativar display flex */
+    display: flex;
+    /*direção dos itens */
+    flex-direction: column;
+    /*espaçamento interno */
+    padding: 20px;
+    /*alinha em cima, em baixo */
+    justify-content: center;
+    /*alinha direita/esquerda */
+    align-items: center;
+    /*arredondar as bordas*/
+    border-radius: 20px;
+}
+img{
+    border-radius: 20px;
+}
+.botao{
+    background-color: green;
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+#cep{
+    height: 35px;
+    text-align: center;
+}
+::placeholder{
+    color:green ;
+}
+.botao:hover{
+    background-color: black;
+    transform: 1s;
+    cursor: pointer;
+    transform: scale();
+}
