@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(15, 155, 197);
+    min-height: 100vh; /*altura - view height*/
+    /*usando flex box*/
+    display: flex;
+    /*centraliza horizontalmente*/
+    justify-content: center;
+    /*centraliza verticalmente*/
+    align-items: center;
+}
+.painel{
+    background-color: rgb(47, 73, 223);
+   /*ativando flex box*/
+   display: flex;
+   /*direção dos itens em coluna*/
+   flex-direction: column;
+   /*espaçamento*/
+   gap: 10px;
+   /*espaçamento nas margens*/
+   padding: 20px;
+   /*arredondar*/
+   border-radius: 10px;
+   border: 10px solid rgb(50, 10, 77);
+   /*sombra*/
+   box-shadow: 0px 4px 150px black;
+   max-width: 600px;
+   align-items: center;
+
+
+}
+#dogimg{
+    width: 100%;
+    /*altura máxima*/
+    max-height: 400px;
+    /*fixar mesmo tamanho*/
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px gray;
+}
+#botao{
+    background-color: rgb(21, 216, 223);
+    color: rgb(13, 22, 65);
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    width: 80px;
+}
